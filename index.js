@@ -1,8 +1,10 @@
 {
     init: function(elevators, floors) {
-        var elevator = elevators[0];
+        var elevator = elevators[0]; // Let's use the first elevator
         elevator.on("idle", function() {
-            elevator.goToFloor(floorNum);
+            // The elevator is idle, so let's go to all the floors (or did we forget one?)
+            elevator.goToFloor(0);
+            elevator.goToFloor(1);
         });
     },
     update: function(dt, elevators, floors) {
